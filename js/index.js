@@ -81,6 +81,105 @@ $(function() {
 
 
 
+/*карусель в табах*/
+
+
+const gap = 16;
+
+const carousel = document.getElementById("carousel"),
+  content = document.getElementById("content"),
+  next = document.getElementById("next"),
+  prev = document.getElementById("prev");
+  item = document.getElementById("carousel-item");
+
+next.addEventListener("click", e => {
+  carousel.scrollBy(width + gap, 0);
+  if (carousel.scrollWidth !== 0) {
+    prev.style.display = "flex";
+  }
+  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "none";
+  }
+});
+prev.addEventListener("click", e => {
+  carousel.scrollBy(-(width + gap), 0);
+  if (carousel.scrollLeft - width - gap <= 0) {
+    prev.style.display = "none";
+  }
+  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "flex";
+  }
+});
+
+let width = item.offsetWidth;
+window.addEventListener("resize", e => (width = item.offsetWidth));
+
+
+
+const carousel2 = document.getElementById("carousel2"),
+  content2 = document.getElementById("content2"),
+  next2 = document.getElementById("next2"),
+  prev2 = document.getElementById("prev2");
+  item2 = document.getElementById("carousel-item2");
+
+next2.addEventListener("click", e => {
+  carousel2.scrollBy(width + gap, 0);
+  if (carousel2.scrollWidth !== 0) {
+    prev2.style.display = "flex";
+  }
+  if (content2.scrollWidth - width - gap <= carousel2.scrollLeft + width) {
+    next2.style.display = "none";
+  }
+});
+prev2.addEventListener("click", e => {
+  carousel2.scrollBy(-(width + gap), 0);
+  if (carousel2.scrollLeft - width - gap <= 0) {
+    prev2.style.display = "none";
+  }
+  if (!content2.scrollWidth - width - gap <= carousel2.scrollLeft + width) {
+    next2.style.display = "flex";
+  }
+});
+
+let width2 = item2.offsetWidth;
+window.addEventListener("resize", e => (width2 = item2.offsetWidth));
+
+
+
+const carousel3 = document.getElementById("carousel3"),
+  content3 = document.getElementById("content3"),
+  next3 = document.getElementById("next3"),
+  prev3 = document.getElementById("prev3");
+  item3 = document.getElementById("carousel-item3");
+
+next3.addEventListener("click", e => {
+  carousel3.scrollBy(width + gap, 0);
+  if (carousel3.scrollWidth !== 0) {
+    prev3.style.display = "flex";
+  }
+  if (content3.scrollWidth - width - gap <= carousel3.scrollLeft + width) {
+    next3.style.display = "none";
+  }
+});
+prev3.addEventListener("click", e => {
+  carousel3.scrollBy(-(width + gap), 0);
+  if (carousel3.scrollLeft - width - gap <= 0) {
+    prev3.style.display = "none";
+  }
+  if (!content3.scrollWidth - width - gap <= carousel3.scrollLeft + width) {
+    next3.style.display = "flex";
+  }
+});
+
+let width3 = item3.offsetWidth;
+window.addEventListener("resize", e => (width3 = item3.offsetWidth));
+
+
+
+
+
+
+
 
 
 /*carousel  */
