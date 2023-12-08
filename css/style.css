@@ -10,6 +10,7 @@ body{
 	font-family: 'Comfortaa';
 	font-size: 16px;
 	color: #323232;	
+	overflow-x:hidden;
 }
 html.lock{
 	overflow: hidden;	
@@ -709,6 +710,12 @@ i.icon-location{
 }
 .depil.women{
 	flex-flow: row-reverse;
+}
+.depil.man .depil-text{
+	padding-right: 0;
+}
+.depil.women .depil-text{
+	padding-left: 0;
 }
 @media (max-width: 800px){
 	.wax-cards{	
