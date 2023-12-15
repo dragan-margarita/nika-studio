@@ -742,6 +742,32 @@ i.icon-location{
 	}
 }
 
+.tabs-wrapper2{
+	border: 1px solid #dfb019;
+  padding: 18px 32px 16px;
+  border-radius: 12px;  
+}
+.tabs-wrapper2 .tabs-content{
+	background-color: transparent;
+}
+.tabs-wrapper2 .tab{
+	background-color: transparent;
+	border: 1px solid #dfb019;
+	padding: 10px 25px;
+	border-radius: 12px;
+	transition: all .3s ease;
+	display: inline-block;
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+.tabs-wrapper2 .tab.active {
+	background-color: #dfb019;
+}
+.tabs-wrapper2 .tabs-content{
+	padding-bottom: 20px;	
+}
+
 
 
 
@@ -750,18 +776,20 @@ i.icon-location{
 
 /*SECTION prices*/
 
-
+#prices{
+	height: auto;
+}
 .prices-container{
 	height: 90vh;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows:repeat(5, 1fr);
+	grid-template-rows:repeat(6, 1fr);
 }
 .prices-img-wrapper{	
 	grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
-  grid-row-end: 6;
+  grid-row-end: 7;
   display: flex;
   justify-content: center;
 }
@@ -781,7 +809,7 @@ i.icon-location{
 	grid-column-start: 2;
   grid-column-end: 5;
   grid-row-start: 2;
-  grid-row-end: 5; 
+  grid-row-end: 6; 
 }
 .tabs-wrapper._active{
 	transform: translate(0px,0px);
@@ -800,8 +828,8 @@ i.icon-location{
 #prices .button{
 	grid-column-start: 2;
   grid-column-end: 5;
-  grid-row-start: 5;
-  grid-row-end: 6; 
+  grid-row-start: 6;
+  grid-row-end: 7; 
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -839,7 +867,7 @@ i.icon-location{
 	display: flex;
 	flex-flow: column;
 	align-items: flex-start;
-	padding: 30px 20px 100px;	
+	padding: 30px 20px;	
 	background-color: rgba(229, 226, 174, 0.5);
 }
 .tabs-content-title{
@@ -850,89 +878,41 @@ i.icon-location{
 .tabs-items{
 	display: block;
 	min-height: 250px;
+	max-height: 55vh;
 }
-#wrapper,#wrapper2,#wrapper3 {
+#wrapper{
   position: relative;
+  padding: 10px;
 }
-#carousel,#carousel2,#carousel3{
-  overflow: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
+.price-tabl{
+	width: 100%;
+	background-color: white;
+	border-radius: 6px;		
 }
-#carousel::-webkit-scrollbar,
-#carousel2::-webkit-scrollbar,
-#carousel3::-webkit-scrollbar {
-  height: 0;
+table{
+	max-height: 55vh;
 }
-#prev,#next,
-#prev2,#next2,
-#prev3,#next3 {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  background: transparent;
-  border: none;
-  padding: 8px;  
-  outline: 0;
-  cursor: pointer;
-  position: absolute;  
+th{	
+	vertical-align: middle;
+	text-align: left;
+	padding-left: 20px;
 }
-#prev, #prev2, #prev3  {
-  top: 120%;
-  left: 0;
-  transform: translate(50%, -50%);
-  display: none;
+td{
+	vertical-align: middle;
+	padding-right: 20px;
 }
-#next,#next2,#next3 {
-  top: 120%;
-  right: 0;
-  transform: translate(-50%, -50%);
+td:last-child{
+	text-align: right;
 }
-#content,
-#content2,
-#content3{
-  display: grid;
-  grid-gap: 16px;
-  grid-auto-flow: column;
-  margin: auto;
-  box-sizing: border-box;
-  padding: 0 5px;
-}
-#carousel-item,
-#carousel-item2,
-#carousel-item3{
-  width: 20vw;  
-  max-width: 265px;	 	
-  padding: 10px 15px  20px 15px;
-  margin: 5px 0; 
-  display: flex;
-  flex-direction: column; 
-  background-color: white;
-  justify-content: center;
-}
-@media (max-width:900px){	
-	#carousel-item,
-	#carousel-item2,
-	#carousel-item3{
-		width: 30vw;
-		height: 250px;  
-	}
-}
-#carousel-item p:first-child,
-#carousel-item2 p:first-child,
-#carousel-item3 p:first-child{
-	
+tr{
 	text-align: center;
-	padding: 16px 0;	
+	height: 36px;
+	vertical-align: middle;;
 }
-#carousel-item p:last-child,
-#carousel-item2 p:last-child,
-#carousel-item3 p:last-child{
-	font-size: 1.5em;
-	font-weight: 600;
-	text-align: center;
-	color: #dfb019;
+tr:nth-child(even) {
+    background-color: rgba(229, 226, 174, 0.2);
 }
+
 @media (max-width:1200px){	
 	.tabs-items{	
 	min-height: 350px;
@@ -965,21 +945,6 @@ i.icon-location{
 	grid-column-start: 1;
   grid-column-end: 5;
  }
-	#carousel-item,
-	#carousel-item2,
-	#carousel-item3{
-	width: 85vw;			
-	} 
-	#carousel-item p:first-child,
-	#carousel-item2 p:first-child,
-	#carousel-item3 p:first-child{
-	font-size: 1em;			
-	}
-	#carousel-item p:last-child,
-	#carousel-item2 p:last-child,
-	#carousel-item3 p:last-child{
-		font-size: 1.5em;		
-	}
 }
 @media (max-width:450px){	
 	.prices-img-wrapper{	
@@ -987,6 +952,9 @@ i.icon-location{
   grid-column-end: 5;
   margin-right: -200px;
  } 	
+ .th{
+ 	font-size: 12px;
+ }
 }
 
 
