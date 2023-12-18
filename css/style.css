@@ -689,7 +689,6 @@ i.icon-location{
 .wax-card:last-child{
 	margin-right: 0;
 }
-
 .accordeon-text span{
 	font-weight: 700;
 	font-size: 20px;
@@ -750,7 +749,12 @@ i.icon-location{
 .tabs-wrapper2 .tabs-content{
 	background-color: transparent;
 }
-.tabs-wrapper2 .tab{
+.tabs-wrapper2 .tabs{
+	display: flex;
+	flex-flow:  row wrap;
+	align-items: stretch;
+}
+.tabs-wrapper2 .tab{	
 	background-color: transparent;
 	border: 1px solid #dfb019;
 	padding: 10px 25px;
@@ -761,11 +765,25 @@ i.icon-location{
 	margin-bottom: 10px;
 	font-size: 16px;
 }
+@media (max-width: 800px){
+	.tabs-wrapper2{	
+  padding: 18px 8px 16px;
+	}
+	.tabs-wrapper2 .tab{	
+	padding: 10px;
+	}
+}
 .tabs-wrapper2 .tab.active {
 	background-color: #dfb019;
 }
 .tabs-wrapper2 .tabs-content{
 	padding-bottom: 20px;	
+}
+.mas-tab-img{
+	width: 100%;
+}
+.tabs-wrapper2 .tabs-content{
+	padding: 0;
 }
 
 
@@ -967,12 +985,29 @@ tr:nth-child(even) {
 
 #materials{
 	background-color: #E5E2AE;	
+	padding: 80px 0 100px;
 }
-#materials .container{
+.logotypes{
 	display: flex;
-	justify-content: center;
+	flex-flow: row wrap;
+	text-align: center;
 	align-items: center;
-	padding: 100px 0;
+	justify-content: center;
+	padding: 25px 0;
+}
+.logo{
+	display: flex;
+	width: 160px;
+	height: auto;	
+	flex-flow: row nowrap;
+	align-items: center;
+	margin: 20px;	
+}
+.material-txt{
+	text-align: center;
+	font-weight: 900;
+	color: white;
+	font-size: 1.1em;
 }
 
 
