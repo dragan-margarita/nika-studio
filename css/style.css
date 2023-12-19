@@ -669,12 +669,18 @@ i.icon-location{
 	padding: 18px 32px 16px;
 	text-transform: uppercase;
 	margin-top: 20px;
-	border-radius: 12px;
-	transition: all 0.3s ease;
+	border-radius: 12px;	
+	transform: translate(0px,50%);
+	opacity: 0;	
+	transition:all 1.5s ease;
 }
 .button-details:hover{
 	background-color:#dfb019;
 	color: white;	
+}
+.button-details._active{
+	transform: translate(0px,0px);
+	opacity: 1;	
 }
 .wax-cards{
 	display: flex;
@@ -843,8 +849,7 @@ i.icon-location{
 }
 .tabs-wrapper._active{
 	transform: translate(0px,0px);
-	opacity: 1;
-	
+	opacity: 1;	
 }
 .prices-title{
 	grid-column-start: 2;
@@ -863,6 +868,13 @@ i.icon-location{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transform: translate(0px,50%);
+	opacity: 0;	
+	transition:all 1.5s ease;
+}
+#prices .button._active{
+	transform: translate(0px,0px);
+	opacity: 1;	
 }
 .tabs__wrapper {
   overflow: hidden;
@@ -941,6 +953,15 @@ tr{
 }
 tr:nth-child(even) {
     background-color: rgba(229, 226, 174, 0.2);
+}
+.detal{
+	transform: translate(0px,50%);
+	opacity: 0;	
+	transition:all 1.5s ease;	
+}
+.detal._active{
+	transform: translate(0px,0px);
+	opacity: 1;	
 }
 @media (max-width:1200px){	
 	.tabs-items{	
@@ -1031,12 +1052,22 @@ tr:nth-child(even) {
 	flex-flow: row nowrap;
 	align-items: center;
 	margin: 20px;	
+	transform: translate(0px,50%);
+	opacity: 0;	
+	transition:all 1.5s ease;	
 }
 .material-txt{
 	text-align: center;
 	font-weight: 900;
 	color: white;
 	font-size: 1.1em;
+	transform: translate(0px,50%);
+	opacity: 0;	
+	transition:all 1.5s ease;	
+}
+.logo._active,.material-txt._active{
+	transform: translate(0px,0px);
+	opacity: 1;	
 }
 
 
@@ -1060,6 +1091,13 @@ tr:nth-child(even) {
 }
 .master-img{
 	max-width: 450px;
+	transform: translate(0px,50%);
+	opacity: 0;	
+	transition:all 1.5s ease;	
+}
+.master-img._active{
+	transform: translate(0px,0px);
+	opacity: 1;	
 }
 .master-text{
 	display: flex;
@@ -1068,7 +1106,15 @@ tr:nth-child(even) {
 	justify-content: center;
 	padding: 32px 0 32px 24px;
 }
-
+.master-text h4,.master-text p{
+	transform: translate(0px,50%);
+	opacity: 0;	
+	transition:all 1.5s ease;	
+}
+.master-text p._active,.master-text h4._active{
+	transform: translate(0px,0px);
+	opacity: 1;	
+}
 @media (max-width: 800px){
 	.master-container{
 		flex-direction: column;
