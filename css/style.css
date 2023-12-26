@@ -17,7 +17,6 @@ body{
 	font-size: 80%;	
 	}
 }
-
 html.lock{
 	overflow: hidden;	
 }
@@ -81,9 +80,6 @@ select{
 	padding: 5px;
 	margin-left: 10px;
 	background-color: transparent;
-}
-select:hover{
-	
 }
 .small-display{
 	display: none;
@@ -381,8 +377,8 @@ i.icon-location{
   grid-row-end: 6;
   display: flex;
   flex-direction: column;
- justify-content: center;
- z-index: 0;
+ 	justify-content: center;
+ 	z-index: 0;
 } 
 .contacts-general .contacts{
  	flex-direction: row;
@@ -1047,7 +1043,7 @@ tr:nth-child(even) {
 }
 .logo{
 	display: flex;
-	width: 160px;
+	width: 100px;
 	height: auto;	
 	flex-flow: row nowrap;
 	align-items: center;
@@ -1137,8 +1133,15 @@ tr:nth-child(even) {
     height: auto;
 }
 .magnific-img {
-    display: inline-block;
-    width: 24.5%;
+  display: inline-block;
+  width: 24.5%;
+  transform: translate(0px,50%);
+	opacity: 0;	
+	transition:all 1.5s ease;
+}
+.magnific-img._active{
+	transform: translate(0px,0px);
+	opacity: 1;	
 }
 @media (max-width: 800px){
 	.magnific-img {    
@@ -1166,6 +1169,7 @@ a.image-popup-vertical-fit {
 
 .mfp-with-zoom.mfp-ready .mfp-container {
     opacity: 1;
+    overflow: hidden;
 }
 .mfp-with-zoom.mfp-ready.mfp-bg {
     opacity: 0.8;
@@ -1189,17 +1193,16 @@ button.mfp-arrow, .mfp-counter {
 	opacity: 1 !important;
 }
 
-
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #FCDAC4;
+  background: #E5E2AE;
   opacity: 0.8; }
 
 .mfp-wrap {
@@ -1210,7 +1213,8 @@ button.mfp-arrow, .mfp-counter {
   z-index: 1043;
   position: fixed;
   outline: none !important;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;	 }
 
 .mfp-container {
   text-align: center;
@@ -1340,7 +1344,7 @@ button::-moz-focus-inner {
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
-  color: #FFF;
+  color: #dfb019;
   right: -6px;
   text-align: right;
   padding-right: 6px;
@@ -1394,7 +1398,7 @@ button::-moz-focus-inner {
 .mfp-arrow-left {
   left: 0; }
   .mfp-arrow-left:after {
-    border-right: 17px solid #FFF;
+    border-right: 17px solid #dfb019;
     margin-left: 31px; }
   .mfp-arrow-left:before {
     margin-left: 25px;
@@ -1403,7 +1407,7 @@ button::-moz-focus-inner {
 .mfp-arrow-right {
   right: 0; }
   .mfp-arrow-right:after {
-    border-left: 17px solid #FFF;
+    border-left: 17px solid #dfb019;
     margin-left: 39px; }
   .mfp-arrow-right:before {
     border-left: 27px solid #3F3F3F; }
@@ -1778,6 +1782,7 @@ img.mfp-img {
 .copyright-wrapper{
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 .web-design-for-you{
 	color:white;
