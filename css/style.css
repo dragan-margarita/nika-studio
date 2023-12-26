@@ -1229,7 +1229,7 @@ button.mfp-arrow, .mfp-counter {
 .mfp-container:before {
   content: '';
   display: inline-block;
-  height:100vh%;
+  height:100vh;
   vertical-align: middle; }
 
 .mfp-align-top .mfp-container:before {
