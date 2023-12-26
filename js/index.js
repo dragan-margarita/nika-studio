@@ -83,6 +83,16 @@ $(function() {
 $(document).ready(function(){
 $('.image-popup-vertical-fit').magnificPopup({
   type: 'image',
+  closeOnBgClick: true,
+  fixedContentPos: false,
+  callbacks: {
+    open: function() {
+      jQuery('html').addClass('lock');
+    },
+    close: function() {
+      jQuery('html').removeClass('lock');
+    }
+  },
   mainClass: 'mfp-with-zoom', 
   gallery:{
       enabled:true
