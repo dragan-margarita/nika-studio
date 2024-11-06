@@ -515,10 +515,10 @@ i.icon-location{
 	align-items: center;	
 	transition: all 0.3s ease;	
 }
-.massage, .pedikure{
+.massage,.biolift{
 	background-color:#FCDAC4;
 }
-.cosmetolog{
+.waxing,.waxing-content{
 	background-color: #E5E2AE;
 }
 .accordeon-content{
@@ -535,10 +535,8 @@ i.icon-location{
 .accordeon-text{
 	padding:10px 25px 10px 15px;
 }
-.kosmetolog-content{
-	background-color: #E5E2AE;
-}
-.massage-content, .pedikure-content{
+
+.massage-content,.biolift-content{
 	background-color: #FCDAC4;
 }
 .waxing-wrapper,.massage-wrapper,.biolift-wrapper,.kosmetolog-wrapper,.pedikure-wrapper{		
@@ -553,13 +551,13 @@ i.icon-location{
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows:repeat(5, 13vh	);
 }
-.waxing-container,.biolift-container,.pedikure-container{
+.kosmetolog-container,.biolift-container,.pedikure-container{
 	padding-left: calc((100% - 1200px)/2);
 }
-.massage-container,.kosmetolog-container{
+.massage-container,.waxing-container{
 	padding-right: calc((100% - 1200px)/2);
 }
-@media (max-width: 1200px){
+/*@media (max-width: 1200px){
 	.waxing-container,.biolift-container,.pedikure-container{
 	padding-left: 2.5vw;
 	}
@@ -574,8 +572,8 @@ i.icon-location{
 	.massage-container,.kosmetolog-container{
 		padding-right:  0;
 	}
-}
-.waxing-img-wrapper,.biolift-img-wrapper,.pedikure-img-wrapper{
+}*/
+.kosmetolog-img-wrapper,.biolift-img-wrapper,.pedikure-img-wrapper{
 	display: flex;
 	grid-column-start: 4;
   grid-column-end: 6;
@@ -583,7 +581,7 @@ i.icon-location{
   grid-row-end: 6; 
   position: relative;
 }
-.massage-img-wrapper,.kosmetolog-img-wrapper{
+.massage-img-wrapper,.waxing-img-wrapper{
 	display: flex;
 	grid-column-start: 1;
   grid-column-end: 3;
@@ -597,7 +595,7 @@ i.icon-location{
   object-fit: cover;
   display: block; 
 } 
-.waxing-text,.biolift-text,.pedikure-text{
+.kosmetolog-text,.biolift-text,.pedikure-text{
 	grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 2;
@@ -608,7 +606,7 @@ i.icon-location{
 	justify-content: center;
 	padding: 32px 24px 32px 0;
 }
-.massage-text,.kosmetolog-text{
+.massage-text,.waxing-text{
 	grid-column-start: 3;
   grid-column-end: 6;
   grid-row-start: 2;
